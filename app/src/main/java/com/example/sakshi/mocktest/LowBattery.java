@@ -14,15 +14,14 @@ import android.support.v4.app.NotificationCompat;
 public class LowBattery extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        //getting battery level
-        int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 1);
+       
         //building notification
             NotificationCompat.Builder builder=new NotificationCompat.Builder(context);
         //setting icon to notification
             builder.setSmallIcon(R.mipmap.lowbattery);
         //setting title and content
             builder.setContentTitle("Low Battery ");
-            builder.setContentText("Battery Remaining: "+level+" Connect Your Device to a Charger");
+            builder.setContentText("Connect Your Device to a Charger");
             // NOTIFICATION
             NotificationManager notificationManager=(NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         //notify
