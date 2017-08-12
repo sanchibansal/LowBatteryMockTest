@@ -22,7 +22,7 @@ public class LowBattery extends BroadcastReceiver {
             builder.setSmallIcon(R.mipmap.lowbattery);
         //setting title and content
             builder.setContentTitle("Low Battery ");
-            builder.setContentText("Battery Remaining: "+level+"/nConnect Your Device to a Charger");
+            builder.setContentText("Battery Remaining: "+level+" Connect Your Device to a Charger");
             // NOTIFICATION
             NotificationManager notificationManager=(NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         //notify
